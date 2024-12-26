@@ -3,11 +3,7 @@ class Solution {
         String answer = "";
         
         for (int i = 0; i < parts.length; i++) {
-            int[] part = parts[i];
-            
-            for (int j = part[0]; j < part[1] + 1; j++) {
-                answer += my_strings[i].charAt(j);
-            }
+            answer += my_strings[i].substring(parts[i][0], parts[i][1] + 1);
         }
         
         return answer;
